@@ -3,5 +3,5 @@ project(Hacker_sDelight)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp MathUtil.cpp)
 add_executable(Hacker_sDelight ${SOURCE_FILES})
