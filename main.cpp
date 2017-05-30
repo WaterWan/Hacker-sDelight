@@ -4,13 +4,14 @@
 using namespace std;
 
 int is_pow_of_two_test();
-
 int turn_off_test();
+int clear_tail_ones_test();
 
 int main() {
     cout << "Hello, Clion!" << endl;
     cout << is_pow_of_two_test() << endl;
     cout << turn_off_test() << endl;
+    cout << clear_tail_ones_test() << endl;
     return 0;
 }
 
@@ -50,6 +51,18 @@ int turn_off_test() {
     if (turn_off(0b11111111111111111111111111111111) != 0b11111111111111111111111111111111) {
         return 4;
     }
-//    cout << "turn_off " << 0b11111111 << " " << turn_off(0b11111111) << endl;
+    return 0;
+}
+
+int clear_tail_ones_test() {
+    if(clear_tail_ones(0b10100111) != 0b10100000) {
+        return 1;
+    }
+    if(clear_tail_ones(0b10101111) != 0b10100000) {
+        return 2;
+    }
+    if(clear_tail_ones(0b01111010) != 0b01111010) {
+        return 3;
+    }
     return 0;
 }
